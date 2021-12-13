@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="fr-FR">
     <head>
-        <title>ohmyfood</title>
+        <title>OhMyFood</title>
         <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- link css -->
         <link rel="stylesheet" type="text/css" href="style.css">
         <!-- links Raleway font -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous"/>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
     </head>
@@ -16,4 +17,116 @@
         <header class="header">
             <img class="logo" alt="" src="images/logo/ohmyfood.png">
         </header>
+        <div id="reservation-section">
+            <div id="localisation">
+                <i class="fas fa-map-marker-alt"></i>
+                <p id="local-city">Paris, Belleville</p>
+            </div>
+            <div id="explore-section">
+                <h2>Réservez le menu qui vous convient</h2>
+                <p>Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
+                <button class="bouton-gradient">Explorer nos restaurants</button>
+            </div>
+        </div>
+        <div id="fonctionnement">
+            <h2>Fonctionnement</h2>
+            <div class="fonctionnement-steps">
+                <span>1</span>
+                <i id="icon1" class="fas fa-mobile-alt"></i>
+                <p>Choisissez un restaurant</p>
+            </div>
+            <div class="fonctionnement-steps">
+                <span>2</span>
+                <div id="bars-icon">
+                    <i id="icon2" class="fas fa-ellipsis-v"></i>
+                    <i id="icon3" class="fas fa-bars"></i>
+                </div>
+                <p>Composez votre menu</p>
+            </div>
+            <div class="fonctionnement-steps">
+                <span>3</span>
+                <i id="icon4" class="fas fa-store"></i>
+                <p>Dégustez au restaurant</p>
+            </div>
+        </div>
+        <div class="restau-liste">
+            <h2>Restaurants</h2>
+            <div class="restaurant">
+                <span class="new"> Nouveau </span>
+                <a href='palette.html'>
+                    <img class="restau-image" alt="" src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg">
+                </a>
+                <div class="restau-flex-row">
+                    <div class="restau-info">
+                        <h4 class="restau-nom">La palette du goût</h4>
+                        <p class="ville">Ménilmontant</p>
+                    </div>
+                    <div class="hearts-icons">
+                        <i class="far fa-heart empty-heart" aria-hidden="true"></i>
+                        <i class="fas fa-heart full-heart" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="restaurant">
+                <span class="new"> Nouveau </span>
+                <a href='note.html'>
+                    <img class="restau-image" alt="" src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg">
+                </a>
+                <div class="restau-flex-row">
+                    <div class="restau-info">
+                        <h4 class="restau-nom">La note enchantée</h4>
+                        <p class="ville">Charonne</p>
+                    </div>
+                    <div class="hearts-icons">
+                        <i class="far fa-heart empty-heart" aria-hidden="true"></i>
+                        <i class="fas fa-heart full-heart" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="restaurant">
+                <a href='francaise.html'>
+                    <img class="restau-image" alt="" src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg">
+                </a>
+                <div class="restau-flex-row">
+                    <div class="restau-info">
+                        <h4 class="restau-nom">À la française</h4>
+                        <p class="ville">Cité rouge</p>
+                    </div>
+                    <div class="hearts-icons">
+                        <i class="far fa-heart empty-heart" aria-hidden="true"></i>
+                        <i class="fas fa-heart full-heart" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="restaurant">
+                <a href='delice.html'>
+                    <img class="restau-image" alt="" src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg">
+                </a>
+                <div class="restau-flex-row">
+                    <div class="restau-info">
+                        <h4 class="restau-nom">Le délice des sens</h4>
+                        <p class="ville">Folie Méricourt</p>
+                    </div>
+                    <div class="hearts-icons">
+                        <i class="far fa-heart empty-heart" aria-hidden="true"></i>
+                        <i class="fas fa-heart full-heart" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <h3>ohmyfood</h3>
+            <div>
+                <i class="fas fa-utensils"  aria-hidden="true"></i>
+                <a href='#'>Proposer un restaurant</a>
+            </div>
+            <div>
+                <i class="fas fa-hands-helping" aria-hidden="true"></i>
+                <a href='#'>Devenir partenaire</a>
+            </div>
+            <a href='#'>Mentions légales</a>
+            <a href='#'>Contact</a>
+        </footer>
     </body>
+</html>
+    

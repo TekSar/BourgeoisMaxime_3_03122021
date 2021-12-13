@@ -1,0 +1,413 @@
+@charset "UTF-8";
+/* line 8, style.scss */
+body {
+  width: 100%;
+  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Roboto", sans-serif;
+}
+
+/* line 16, style.scss */
+.header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 1rem auto;
+}
+/* line 21, style.scss */
+.header .logo {
+  width: 50%;
+  margin: auto;
+}
+/* line 25, style.scss */
+.header i {
+  position: relative;
+  left: 1rem;
+  text-decoration: none;
+  color: black;
+}
+
+/* line 32, style.scss */
+#reservation-section {
+  background: #ececec;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 2rem;
+}
+/* line 37, style.scss */
+#reservation-section #localisation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #dfdfdf;
+  box-shadow: #c1c1c1 0px 5px 5px -5px inset;
+  font-weight: 600;
+  padding: 0 0rem 0 0;
+}
+/* line 45, style.scss */
+#reservation-section #localisation #local-city {
+  margin-left: 1rem;
+}
+/* line 49, style.scss */
+#reservation-section #explore-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 1.5rem 1rem;
+}
+/* line 56, style.scss */
+#reservation-section #explore-section h2 {
+  margin-bottom: 0;
+}
+/* line 59, style.scss */
+#reservation-section #explore-section p {
+  color: grey;
+}
+
+/* line 65, style.scss */
+.bouton-gradient {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 75px;
+  background: linear-gradient(#ff79da, #9356DC);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: grey 0px 5px 20px -5px;
+  transition: all 0.3s ease;
+}
+/* line 75, style.scss */
+.bouton-gradient:hover {
+  background: linear-gradient(#ff79da, #9356DC);
+  opacity: 0.85;
+  box-shadow: grey 0px 5px 10px 0px;
+}
+
+/* line 82, style.scss */
+#fonctionnement {
+  display: flex;
+  flex-direction: column;
+  margin: 0 1rem 2rem 2rem;
+}
+/* line 87, style.scss */
+#fonctionnement .fonctionnement-steps {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #ececec;
+  margin: 1rem;
+  border-radius: 50px;
+  box-shadow: grey 0px 5px 30px -10px;
+  height: 75px;
+  transition: all 0.3s ease;
+}
+/* line 99, style.scss */
+#fonctionnement .fonctionnement-steps:hover {
+  background: #9256dc44;
+}
+/* line 101, style.scss */
+#fonctionnement .fonctionnement-steps:hover i {
+  color: #9356DC;
+}
+/* line 106, style.scss */
+#fonctionnement .fonctionnement-steps span {
+  background: #9356DC;
+  height: 50px;
+  width: 50px;
+  color: white;
+  text-align: center;
+  border-radius: 75px;
+  margin-left: -2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* line 118, style.scss */
+#fonctionnement .fonctionnement-steps i {
+  color: grey;
+}
+/* line 121, style.scss */
+#fonctionnement .fonctionnement-steps #icon1, #fonctionnement .fonctionnement-steps #bars-icon, #fonctionnement .fonctionnement-steps #icon4 {
+  display: flex;
+  justify-content: center;
+  margin-left: 1rem;
+}
+/* line 126, style.scss */
+#fonctionnement .fonctionnement-steps p {
+  margin-right: 1rem;
+  margin-left: 1rem;
+  font-weight: 600;
+}
+
+/* line 133, style.scss */
+.restau-liste {
+  display: flex;
+  flex-direction: column;
+  background: #ececec;
+  padding: 1rem 1rem 1rem 1rem;
+}
+/* line 138, style.scss */
+.restau-liste h2 {
+  margin: 0.5rem 0;
+}
+/* line 141, style.scss */
+.restau-liste .restaurant {
+  margin: 1rem 0;
+}
+/* line 143, style.scss */
+.restau-liste .restaurant .new {
+  position: absolute;
+  background: #99e2d0;
+  right: 2rem;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  color: #16725b;
+}
+/* line 152, style.scss */
+.restau-liste .restau-image {
+  display: block;
+  width: -webkit-fill-available;
+  height: 150px;
+  object-fit: cover;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+}
+/* line 160, style.scss */
+.restau-liste .restau-flex-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  padding-right: 1rem;
+}
+/* line 171, style.scss */
+.restau-liste .restau-info {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+/* line 175, style.scss */
+.restau-liste .restau-info h4 {
+  font-weight: 600px;
+  margin: 0;
+}
+/* line 179, style.scss */
+.restau-liste .restau-info p {
+  margin: 0;
+}
+
+/* line 184, style.scss */
+.hearts-icons {
+  display: flex;
+  flex-direction: column;
+  width: 50px;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+}
+/* line 191, style.scss */
+.hearts-icons .empty-heart {
+  display: block;
+  position: absolute;
+}
+/* line 195, style.scss */
+.hearts-icons .full-heart {
+  display: none;
+  position: absolute;
+  animation: heartAnim 0.3s ease-in-out;
+}
+/* line 199, style.scss */
+.hearts-icons .full-heart:before {
+  background: -moz-linear-gradient(top, #ff79da 0%, #9356DC 100%);
+  background: -webkit-linear-gradient(top, #ff79da 0%, #9356DC 100%);
+  background: linear-gradient(to bottom, #ff79da 0%, #9356DC 100%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/* line 210, style.scss */
+.hearts-icons:hover .full-heart {
+  display: block;
+}
+/* line 213, style.scss */
+.hearts-icons:hover .empty-heart {
+  opacity: 0;
+}
+
+/* line 220, style.scss */
+.image-top-menu-française {
+  background-image: url("images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+}
+
+/* line 223, style.scss */
+.image-top-menu-palette {
+  background-image: url("images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+}
+
+/* line 226, style.scss */
+.image-top-menu-note {
+  background-image: url("images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+}
+
+/* line 229, style.scss */
+.image-top-menu-delice {
+  background-image: url("images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+}
+
+/* line 232, style.scss */
+.image-top-menu-francaise, .image-top-menu-palette, .image-top-menu-note, .image-top-menu-delice {
+  width: 100%;
+  height: 250px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+/* line 240, style.scss */
+.image-top-menu-francaise .top-menu, .image-top-menu-palette .top-menu, .image-top-menu-note .top-menu, .image-top-menu-delice .top-menu {
+  display: flex;
+  background-color: #ececec;
+  border-top-right-radius: 2rem;
+  border-top-left-radius: 2rem;
+  font-family: "Shrikhand", cursive;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+/* line 249, style.scss */
+.image-top-menu-francaise .top-menu .titre-menu, .image-top-menu-palette .top-menu .titre-menu, .image-top-menu-note .top-menu .titre-menu, .image-top-menu-delice .top-menu .titre-menu {
+  font-size: 1.8rem;
+}
+/* line 253, style.scss */
+.image-top-menu-francaise .image-menu, .image-top-menu-palette .image-menu, .image-top-menu-note .image-menu, .image-top-menu-delice .image-menu {
+  width: 100%;
+}
+
+/* line 257, style.scss */
+.menu {
+  margin-top: -1rem;
+  padding-bottom: 3rem;
+  background-color: #ececec;
+}
+/* line 262, style.scss */
+.menu section h2 {
+  margin: 0 1rem;
+  font-weight: 100;
+  color: gray;
+}
+/* line 267, style.scss */
+.menu section hr {
+  height: 2px;
+  background-color: #99e2d0;
+  border: none;
+  width: 50px;
+  margin: 0 0 0 1rem;
+}
+/* line 274, style.scss */
+.menu section article {
+  display: flex;
+  background-color: white;
+  margin: 1rem;
+  border-radius: 1rem;
+  align-items: stretch;
+}
+/* line 281, style.scss */
+.menu section article:hover .check-icon {
+  opacity: 1;
+  width: 15%;
+}
+/* line 285, style.scss */
+.menu section article:hover .plat-section {
+  width: 85%;
+}
+/* line 289, style.scss */
+.menu section article .plat-section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  transition-property: width;
+  transition-duration: 1s;
+}
+/* line 296, style.scss */
+.menu section article .check-icon {
+  display: flex;
+  opacity: 0;
+  background-color: #99e2d0;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  border-bottom-right-radius: 1rem;
+  border-top-right-radius: 1rem;
+  width: 0%;
+  transition-property: width, opacity;
+  transition-duration: 1s;
+}
+/* line 309, style.scss */
+.menu section article .plat-titre {
+  display: flex;
+  margin: 0.5rem 1rem 0rem;
+  font-size: 1rem;
+}
+/* line 314, style.scss */
+.menu section article .plat-more {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5rem 1rem 0.5rem;
+}
+/* line 318, style.scss */
+.menu section article .plat-more .plat-desc {
+  margin: 0;
+  color: gray;
+  font-size: 0.9rem;
+}
+/* line 323, style.scss */
+.menu section article .plat-more .plat-price {
+  margin: 0;
+  font-weight: 600;
+  font-size: 1rem;
+}
+/* line 331, style.scss */
+.menu .bouton-gradient {
+  margin: 2rem 5rem;
+  display: flex;
+  justify-content: center;
+}
+
+/* line 338, style.scss */
+footer {
+  background: #232323;
+  padding: 1rem 1rem 1rem 1rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+/* line 344, style.scss */
+footer div {
+  margin-top: 0.5rem;
+}
+/* line 347, style.scss */
+footer h3 {
+  font-family: "Shrikhand", cursive;
+  font-size: 1.5rem;
+  font-weight: 100;
+  margin: 0;
+}
+/* line 353, style.scss */
+footer i {
+  width: 25px;
+}
+/* line 356, style.scss */
+footer a {
+  margin-top: 0.5rem;
+  text-decoration: none;
+  color: white;
+}
