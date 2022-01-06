@@ -191,11 +191,14 @@ body{
     .empty-heart{
         display: block;
         position: absolute;
+        opacity: 1;
+        transition: opacity 0.5s ease-in-out;
     }
     .full-heart{
-        display: none;
+        display: block;
         position: absolute;
-        animation: heartAnim 0.3s ease-in-out;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
         &:before{
             background: linear-gradient(to bottom, $secondaire 0%, $primaire 100%);
             -webkit-background-clip: text;
@@ -206,6 +209,7 @@ body{
     &:hover{
         .full-heart{
             display: block;
+            opacity: 1;
         }
         .empty-heart{
             opacity: 0;
@@ -360,4 +364,66 @@ footer{
 
 }
 
+.plat1{
+    opacity: 0;
+    animation: appariPlat 1s ease-in-out ;
+    animation-fill-mode: forwards;
+    animation-delay: 0.5s;
+}
+.plat2{
+    opacity: 0;
+    animation: appariPlat 1s ease-in-out ;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+}
+.plat3{
+    opacity: 0;
+    animation: appariPlat 1s ease-in-out ;
+    animation-fill-mode: forwards;
+    animation-delay: 1.5s;
+}
+.plat4{
+    opacity: 0;
+    animation: appariPlat 1s ease-in-out ;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+}
+.plat5{
+    opacity: 0;
+    animation: appariPlat 1s ease-in-out ;
+    animation-fill-mode: forwards;
+    animation-delay: 2.5s;
+}
+.plat6{
+    opacity: 0;
+    animation: appariPlat 1s ease-in-out ;
+    animation-fill-mode: forwards;
+    animation-delay: 3s;
+}
+.plat7{
+    opacity: 0;
+    animation: appariPlat 1s ease-in-out ;
+    animation-fill-mode: forwards;
+    animation-delay: 3.5s;
+}
+.plat8{
+    opacity: 0;
+    animation: appariPlat 1s ease-in-out ;
+    animation-fill-mode: forwards;
+    animation-delay: 4s;
+}
+.plat9{
+    opacity: 0;
+    animation: appariPlat 1s ease-in-out ;
+    animation-fill-mode: forwards;
+    animation-delay: 4.5s;
+}
 
+@keyframes appariPlat{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
