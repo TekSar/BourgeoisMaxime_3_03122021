@@ -5,21 +5,28 @@ body {
   margin-left: auto;
   margin-right: auto;
   font-family: "Roboto", sans-serif;
+  counter-reset: plat;
 }
 
-/* line 16, style.scss */
+@media screen and (min-width: 1200px) {
+  /* line 18, style.scss */
+  body {
+    width: 70%;
+  }
+}
+/* line 23, style.scss */
 .header {
   display: flex;
   align-items: center;
   width: 100%;
   margin: 1rem auto;
 }
-/* line 21, style.scss */
+/* line 28, style.scss */
 .header .logo {
   width: 50%;
   margin: auto;
 }
-/* line 25, style.scss */
+/* line 32, style.scss */
 .header i {
   position: relative;
   left: 1rem;
@@ -27,14 +34,14 @@ body {
   color: black;
 }
 
-/* line 32, style.scss */
+/* line 39, style.scss */
 #reservation-section {
   background: #ececec;
   display: flex;
   flex-direction: column;
   padding-bottom: 2rem;
 }
-/* line 37, style.scss */
+/* line 44, style.scss */
 #reservation-section #localisation {
   display: flex;
   align-items: center;
@@ -44,11 +51,11 @@ body {
   font-weight: 600;
   padding: 0 0rem 0 0;
 }
-/* line 45, style.scss */
+/* line 52, style.scss */
 #reservation-section #localisation #local-city {
   margin-left: 1rem;
 }
-/* line 49, style.scss */
+/* line 56, style.scss */
 #reservation-section #explore-section {
   display: flex;
   flex-direction: column;
@@ -57,16 +64,16 @@ body {
   text-align: center;
   margin: 1.5rem 1rem;
 }
-/* line 56, style.scss */
+/* line 63, style.scss */
 #reservation-section #explore-section h2 {
   margin-bottom: 0;
 }
-/* line 59, style.scss */
+/* line 66, style.scss */
 #reservation-section #explore-section p {
   color: grey;
 }
 
-/* line 65, style.scss */
+/* line 72, style.scss */
 .bouton-gradient {
   padding: 1rem 2rem;
   border: none;
@@ -77,21 +84,22 @@ body {
   cursor: pointer;
   box-shadow: grey 0px 5px 20px -5px;
   transition: all 0.3s ease;
+  text-decoration: none;
 }
-/* line 75, style.scss */
+/* line 83, style.scss */
 .bouton-gradient:hover {
   background: linear-gradient(#ff79da, #9356DC);
   opacity: 0.85;
   box-shadow: grey 0px 5px 10px 0px;
 }
 
-/* line 82, style.scss */
+/* line 97, style.scss */
 #fonctionnement {
   display: flex;
   flex-direction: column;
   margin: 0 1rem 2rem 2rem;
 }
-/* line 87, style.scss */
+/* line 102, style.scss */
 #fonctionnement .fonctionnement-steps {
   display: flex;
   flex-direction: row;
@@ -104,15 +112,15 @@ body {
   height: 75px;
   transition: all 0.3s ease;
 }
-/* line 99, style.scss */
+/* line 114, style.scss */
 #fonctionnement .fonctionnement-steps:hover {
   background: #9256dc44;
 }
-/* line 101, style.scss */
+/* line 116, style.scss */
 #fonctionnement .fonctionnement-steps:hover i {
   color: #9356DC;
 }
-/* line 106, style.scss */
+/* line 121, style.scss */
 #fonctionnement .fonctionnement-steps span {
   background: #9356DC;
   height: 30px;
@@ -125,39 +133,40 @@ body {
   align-items: center;
   justify-content: center;
 }
-/* line 118, style.scss */
+/* line 133, style.scss */
 #fonctionnement .fonctionnement-steps i {
   color: grey;
 }
-/* line 121, style.scss */
+/* line 136, style.scss */
 #fonctionnement .fonctionnement-steps #icon1, #fonctionnement .fonctionnement-steps #bars-icon, #fonctionnement .fonctionnement-steps #icon4 {
   display: flex;
   justify-content: center;
   margin-left: 1rem;
 }
-/* line 126, style.scss */
+/* line 141, style.scss */
 #fonctionnement .fonctionnement-steps p {
   margin-right: 1rem;
   margin-left: 1rem;
   font-weight: 600;
 }
 
-/* line 133, style.scss */
+/* line 148, style.scss */
 .restau-liste {
   display: flex;
   flex-direction: column;
   background: #ececec;
   padding: 1rem 1rem 1rem 1rem;
 }
-/* line 138, style.scss */
+/* line 153, style.scss */
 .restau-liste h2 {
   margin: 2rem 0 0.5rem 0;
 }
-/* line 141, style.scss */
+/* line 156, style.scss */
 .restau-liste .restaurant {
   margin: 1rem 0;
+  position: relative;
 }
-/* line 143, style.scss */
+/* line 159, style.scss */
 .restau-liste .restaurant .new {
   position: absolute;
   background: #99e2d0;
@@ -166,7 +175,7 @@ body {
   margin-top: 1rem;
   color: #16725b;
 }
-/* line 152, style.scss */
+/* line 168, style.scss */
 .restau-liste .restau-image {
   display: block;
   width: 100%;
@@ -175,7 +184,7 @@ body {
   border-top-left-radius: 2rem;
   border-top-right-radius: 2rem;
 }
-/* line 160, style.scss */
+/* line 176, style.scss */
 .restau-liste .restau-flex-row {
   display: flex;
   flex-direction: row;
@@ -186,23 +195,23 @@ body {
   border-bottom-right-radius: 2rem;
   padding-right: 1rem;
 }
-/* line 171, style.scss */
+/* line 187, style.scss */
 .restau-liste .restau-info {
   display: flex;
   flex-direction: column;
   padding: 1rem;
 }
-/* line 175, style.scss */
+/* line 191, style.scss */
 .restau-liste .restau-info h4 {
   font-weight: 600;
   margin: 0;
 }
-/* line 179, style.scss */
+/* line 195, style.scss */
 .restau-liste .restau-info p {
   margin: 0;
 }
 
-/* line 184, style.scss */
+/* line 200, style.scss */
 .hearts-icons {
   display: flex;
   flex-direction: column;
@@ -211,58 +220,58 @@ body {
   align-items: center;
   justify-content: center;
 }
-/* line 191, style.scss */
+/* line 207, style.scss */
 .hearts-icons .empty-heart {
   display: block;
   position: absolute;
   opacity: 1;
   transition: opacity 0.5s ease-in-out;
 }
-/* line 197, style.scss */
+/* line 213, style.scss */
 .hearts-icons .full-heart {
   display: block;
   position: absolute;
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
 }
-/* line 202, style.scss */
+/* line 218, style.scss */
 .hearts-icons .full-heart:before {
   background: linear-gradient(to bottom, #ff79da 0%, #9356DC 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-/* line 210, style.scss */
+/* line 226, style.scss */
 .hearts-icons:hover .full-heart {
   display: block;
   opacity: 1;
 }
-/* line 214, style.scss */
+/* line 230, style.scss */
 .hearts-icons:hover .empty-heart {
   opacity: 0;
 }
 
-/* line 221, style.scss */
+/* line 237, style.scss */
 .image-top-menu-francaise {
   background-image: url("images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
 }
 
-/* line 224, style.scss */
+/* line 240, style.scss */
 .image-top-menu-palette {
   background-image: url("images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
 }
 
-/* line 227, style.scss */
+/* line 243, style.scss */
 .image-top-menu-note {
   background-image: url("images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
 }
 
-/* line 230, style.scss */
+/* line 246, style.scss */
 .image-top-menu-delice {
   background-image: url("images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
 }
 
-/* line 233, style.scss */
+/* line 249, style.scss */
 .image-top-menu-francaise, .image-top-menu-palette, .image-top-menu-note, .image-top-menu-delice {
   width: 100%;
   height: 250px;
@@ -272,7 +281,7 @@ body {
   flex-direction: column;
   justify-content: flex-end;
 }
-/* line 241, style.scss */
+/* line 257, style.scss */
 .image-top-menu-francaise .top-menu, .image-top-menu-palette .top-menu, .image-top-menu-note .top-menu, .image-top-menu-delice .top-menu {
   display: flex;
   background-color: #ececec;
@@ -283,28 +292,28 @@ body {
   justify-content: space-between;
   padding: 0 1rem;
 }
-/* line 250, style.scss */
+/* line 266, style.scss */
 .image-top-menu-francaise .top-menu .titre-menu, .image-top-menu-palette .top-menu .titre-menu, .image-top-menu-note .top-menu .titre-menu, .image-top-menu-delice .top-menu .titre-menu {
   font-size: 1.8rem;
 }
-/* line 254, style.scss */
+/* line 270, style.scss */
 .image-top-menu-francaise .image-menu, .image-top-menu-palette .image-menu, .image-top-menu-note .image-menu, .image-top-menu-delice .image-menu {
   width: 100%;
 }
 
-/* line 258, style.scss */
+/* line 274, style.scss */
 .menu {
   margin-top: -1rem;
   padding-bottom: 3rem;
   background-color: #ececec;
 }
-/* line 263, style.scss */
+/* line 279, style.scss */
 .menu section h2 {
   margin: 0 1rem;
   font-weight: 100;
   color: #4c4c4c;
 }
-/* line 268, style.scss */
+/* line 284, style.scss */
 .menu section hr {
   height: 3px;
   background-color: #99e2d0;
@@ -312,8 +321,8 @@ body {
   width: 50px;
   margin: 0.5rem 0 0 1rem;
 }
-/* line 275, style.scss */
-.menu section article {
+/* line 291, style.scss */
+.menu section .plat {
   display: flex;
   background-color: white;
   margin: 1rem;
@@ -321,25 +330,25 @@ body {
   align-items: stretch;
   box-shadow: 0px 5px 30px -10px lightgrey;
 }
-/* line 283, style.scss */
-.menu section article:hover .check-icon {
+/* line 299, style.scss */
+.menu section .plat:hover .check-icon {
   opacity: 1;
   width: 15%;
 }
-/* line 287, style.scss */
-.menu section article:hover .plat-section {
+/* line 303, style.scss */
+.menu section .plat:hover .plat-section {
   width: 85%;
 }
-/* line 291, style.scss */
-.menu section article .plat-section {
+/* line 307, style.scss */
+.menu section .plat .plat-section {
   display: flex;
   flex-direction: column;
   width: 100%;
   transition-property: width;
   transition-duration: 1s;
 }
-/* line 298, style.scss */
-.menu section article .check-icon {
+/* line 314, style.scss */
+.menu section .plat .check-icon {
   display: flex;
   opacity: 0;
   background-color: #99e2d0;
@@ -352,38 +361,38 @@ body {
   transition-property: width, opacity;
   transition-duration: 1s;
 }
-/* line 311, style.scss */
-.menu section article .plat-titre {
+/* line 327, style.scss */
+.menu section .plat .plat-titre {
   display: flex;
   margin: 0.5rem 1rem 0rem;
   font-size: 1rem;
 }
-/* line 316, style.scss */
-.menu section article .plat-more {
+/* line 332, style.scss */
+.menu section .plat .plat-more {
   display: flex;
   justify-content: space-between;
   margin: 0.5rem 1rem 0.5rem;
 }
-/* line 320, style.scss */
-.menu section article .plat-more .plat-desc {
+/* line 336, style.scss */
+.menu section .plat .plat-more .plat-desc {
   margin: 0;
   color: gray;
   font-size: 0.9rem;
 }
-/* line 325, style.scss */
-.menu section article .plat-more .plat-price {
+/* line 341, style.scss */
+.menu section .plat .plat-more .plat-price {
   margin: 0;
   font-weight: 600;
   font-size: 1rem;
 }
-/* line 333, style.scss */
+/* line 349, style.scss */
 .menu .bouton-gradient {
   margin: 2rem 5rem;
   display: flex;
   justify-content: center;
 }
 
-/* line 340, style.scss */
+/* line 356, style.scss */
 footer {
   background: #232323;
   padding: 1.5rem 1.5rem 1.5rem 1.5rem;
@@ -391,98 +400,45 @@ footer {
   display: flex;
   flex-direction: column;
 }
-/* line 346, style.scss */
+/* line 362, style.scss */
 footer div {
   margin-top: 0.5rem;
 }
-/* line 349, style.scss */
+/* line 365, style.scss */
 footer h3 {
   font-family: "Shrikhand", cursive;
   font-size: 1.5rem;
   font-weight: 100;
   margin: 0 0 0.5rem 0;
 }
-/* line 355, style.scss */
+/* line 371, style.scss */
 footer i {
   width: 25px;
 }
-/* line 358, style.scss */
+/* line 374, style.scss */
 footer a {
   margin-top: 0.5rem;
   text-decoration: none;
   color: white;
 }
 
-/* line 367, style.scss */
-.plat1 {
+/* line 382, style.scss */
+.anim {
   opacity: 0;
   animation: appariPlat 1s ease-in-out;
   animation-fill-mode: forwards;
-  animation-delay: 0.5s;
 }
-
-/* line 373, style.scss */
-.plat2 {
-  opacity: 0;
-  animation: appariPlat 1s ease-in-out;
-  animation-fill-mode: forwards;
+/* line 386, style.scss */
+.anim.entrees {
   animation-delay: 1s;
 }
-
-/* line 379, style.scss */
-.plat3 {
-  opacity: 0;
-  animation: appariPlat 1s ease-in-out;
-  animation-fill-mode: forwards;
-  animation-delay: 1.5s;
-}
-
-/* line 385, style.scss */
-.plat4 {
-  opacity: 0;
-  animation: appariPlat 1s ease-in-out;
-  animation-fill-mode: forwards;
+/* line 389, style.scss */
+.anim.plats {
   animation-delay: 2s;
 }
-
-/* line 391, style.scss */
-.plat5 {
-  opacity: 0;
-  animation: appariPlat 1s ease-in-out;
-  animation-fill-mode: forwards;
-  animation-delay: 2.5s;
-}
-
-/* line 397, style.scss */
-.plat6 {
-  opacity: 0;
-  animation: appariPlat 1s ease-in-out;
-  animation-fill-mode: forwards;
+/* line 392, style.scss */
+.anim.desserts {
   animation-delay: 3s;
-}
-
-/* line 403, style.scss */
-.plat7 {
-  opacity: 0;
-  animation: appariPlat 1s ease-in-out;
-  animation-fill-mode: forwards;
-  animation-delay: 3.5s;
-}
-
-/* line 409, style.scss */
-.plat8 {
-  opacity: 0;
-  animation: appariPlat 1s ease-in-out;
-  animation-fill-mode: forwards;
-  animation-delay: 4s;
-}
-
-/* line 415, style.scss */
-.plat9 {
-  opacity: 0;
-  animation: appariPlat 1s ease-in-out;
-  animation-fill-mode: forwards;
-  animation-delay: 4.5s;
 }
 
 @keyframes appariPlat {
@@ -491,5 +447,55 @@ footer a {
   }
   to {
     opacity: 1;
+  }
+}
+/* line 420, style.scss */
+.backloader {
+  position: fixed;
+  display: block;
+  background-color: rgba(128, 128, 128, 0.637);
+  z-index: 98;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  animation: displaynone 3s linear;
+  animation-fill-mode: forwards;
+}
+
+/* line 432, style.scss */
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #9356DC;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  margin: -76px 0 0 -76px;
+  z-index: 1;
+  opacity: 1;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes displaynone {
+  0% {
+    z-index: 98;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    z-index: -98;
+    opacity: 0;
   }
 }

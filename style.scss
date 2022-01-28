@@ -11,6 +11,13 @@ body{
     margin-left: auto;
     margin-right: auto;
     font-family:$font-text;
+
+    counter-reset: plat;
+}
+@media screen and (min-width:1200px){
+    body{
+        width: 70%;
+    }
 }
 
 .header{
@@ -72,12 +79,20 @@ body{
     cursor:pointer;
     box-shadow: grey 0px 5px 20px -5px;
     transition: all 0.3s ease;
+    text-decoration: none;
     &:hover{
         background: linear-gradient($secondaire , $primaire);
         opacity:0.85;
         box-shadow: grey 0px 5px 10px 0px;
     }
 }
+
+// @media screen and (min-width:1200px){
+//     .desktop-row{
+//         display: flex;
+//         flex-direction: column;
+//     }
+// }
 
 #fonctionnement{
     display:flex;
@@ -140,6 +155,7 @@ body{
     }
     .restaurant{   
         margin:1rem 0;
+        position: relative;
         .new{
             position:absolute;
             background:$tertiaire;
@@ -272,7 +288,7 @@ body{
             width: 50px;
             margin: 0.5rem 0 0 1rem;
         }
-        article{
+        .plat{
             display: flex;
             background-color: white;
             margin: 1rem;
@@ -363,61 +379,34 @@ footer{
 
 
 }
+.anim{
+    opacity: 0;
+    animation: appariPlat 1s ease-in-out ;
+    animation-fill-mode: forwards;
+    &.entrees{
+        animation-delay: 1s;
+    }
+    &.plats{
+        animation-delay: 2s;
+    }
+    &.desserts{
+        animation-delay: 3s;
+    }
+}
 
-.plat1{
-    opacity: 0;
-    animation: appariPlat 1s ease-in-out ;
-    animation-fill-mode: forwards;
-    animation-delay: 0.5s;
-}
-.plat2{
-    opacity: 0;
-    animation: appariPlat 1s ease-in-out ;
-    animation-fill-mode: forwards;
-    animation-delay: 1s;
-}
-.plat3{
-    opacity: 0;
-    animation: appariPlat 1s ease-in-out ;
-    animation-fill-mode: forwards;
-    animation-delay: 1.5s;
-}
-.plat4{
-    opacity: 0;
-    animation: appariPlat 1s ease-in-out ;
-    animation-fill-mode: forwards;
-    animation-delay: 2s;
-}
-.plat5{
-    opacity: 0;
-    animation: appariPlat 1s ease-in-out ;
-    animation-fill-mode: forwards;
-    animation-delay: 2.5s;
-}
-.plat6{
-    opacity: 0;
-    animation: appariPlat 1s ease-in-out ;
-    animation-fill-mode: forwards;
-    animation-delay: 3s;
-}
-.plat7{
-    opacity: 0;
-    animation: appariPlat 1s ease-in-out ;
-    animation-fill-mode: forwards;
-    animation-delay: 3.5s;
-}
-.plat8{
-    opacity: 0;
-    animation: appariPlat 1s ease-in-out ;
-    animation-fill-mode: forwards;
-    animation-delay: 4s;
-}
-.plat9{
-    opacity: 0;
-    animation: appariPlat 1s ease-in-out ;
-    animation-fill-mode: forwards;
-    animation-delay: 4.5s;
-}
+// .plat{
+//     counter-increment: plat;
+//     opacity: 0;
+//     animation: appariPlat;
+//     animation-fill-mode: forwards;
+//     animation-delay:calc(attr(data-count) * 500ms);
+// }
+
+// @for $i from 1 through 50 {
+//     &:nth-child(#{$i}) {
+//       animation-delay: 100ms * $i;
+//     }
+// }
 
 @keyframes appariPlat{
     from{
@@ -427,3 +416,43 @@ footer{
         opacity: 1;
     }
 }
+
+.backloader{
+    position: fixed;
+    display: block;
+    background-color: rgba(128, 128, 128, 0.637);
+    z-index: 98;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    animation: displaynone 3s linear;
+    animation-fill-mode: forwards;
+}
+
+.loader {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid $primaire;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin: -76px 0 0 -76px;
+    z-index: 1;
+    opacity: 1;
+    
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes displaynone {
+    0% { z-index: 98; }
+    50%{ opacity: 0; }
+    100% { z-index: -98; opacity: 0; }
+  }
