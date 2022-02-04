@@ -332,25 +332,31 @@ body {
 }
 /* line 299, style.scss */
 .menu section .plat:hover .check-icon {
-  opacity: 1;
   width: 15%;
 }
-/* line 303, style.scss */
+/* line 301, style.scss */
+.menu section .plat:hover .check-icon i {
+  opacity: 1;
+  animation: spinicon 1s linear;
+  animation-fill-mode: forwards;
+}
+/* line 307, style.scss */
 .menu section .plat:hover .plat-section {
   width: 85%;
 }
-/* line 307, style.scss */
+/* line 311, style.scss */
 .menu section .plat .plat-section {
   display: flex;
   flex-direction: column;
   width: 100%;
   transition-property: width;
   transition-duration: 1s;
+  height: 60px;
 }
-/* line 314, style.scss */
+/* line 319, style.scss */
 .menu section .plat .check-icon {
   display: flex;
-  opacity: 0;
+  opacity: 1;
   background-color: #99e2d0;
   color: white;
   align-items: center;
@@ -361,38 +367,51 @@ body {
   transition-property: width, opacity;
   transition-duration: 1s;
 }
-/* line 327, style.scss */
+/* line 331, style.scss */
+.menu section .plat .check-icon i {
+  opacity: 0;
+  transition-duration: 0.5s;
+}
+/* line 336, style.scss */
 .menu section .plat .plat-titre {
   display: flex;
   margin: 0.5rem 1rem 0rem;
   font-size: 1rem;
 }
-/* line 332, style.scss */
+/* line 341, style.scss */
 .menu section .plat .plat-more {
   display: flex;
   justify-content: space-between;
-  margin: 0.5rem 1rem 0.5rem;
+  margin: 0.5rem 1rem;
+  height: 20px;
+  align-items: center;
+  white-space: nowrap;
 }
-/* line 336, style.scss */
+/* line 348, style.scss */
 .menu section .plat .plat-more .plat-desc {
   margin: 0;
   color: gray;
   font-size: 0.9rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-/* line 341, style.scss */
+/* line 355, style.scss */
 .menu section .plat .plat-more .plat-price {
   margin: 0;
   font-weight: 600;
   font-size: 1rem;
+  right: -10px;
+  background-color: white;
+  bottom: 0;
 }
-/* line 349, style.scss */
+/* line 366, style.scss */
 .menu .bouton-gradient {
   margin: 2rem 5rem;
   display: flex;
   justify-content: center;
 }
 
-/* line 356, style.scss */
+/* line 373, style.scss */
 footer {
   background: #232323;
   padding: 1.5rem 1.5rem 1.5rem 1.5rem;
@@ -400,43 +419,43 @@ footer {
   display: flex;
   flex-direction: column;
 }
-/* line 362, style.scss */
+/* line 379, style.scss */
 footer div {
   margin-top: 0.5rem;
 }
-/* line 365, style.scss */
+/* line 382, style.scss */
 footer h3 {
   font-family: "Shrikhand", cursive;
   font-size: 1.5rem;
   font-weight: 100;
   margin: 0 0 0.5rem 0;
 }
-/* line 371, style.scss */
+/* line 388, style.scss */
 footer i {
   width: 25px;
 }
-/* line 374, style.scss */
+/* line 391, style.scss */
 footer a {
   margin-top: 0.5rem;
   text-decoration: none;
   color: white;
 }
 
-/* line 382, style.scss */
+/* line 399, style.scss */
 .anim {
   opacity: 0;
   animation: appariPlat 1s ease-in-out;
   animation-fill-mode: forwards;
 }
-/* line 386, style.scss */
+/* line 403, style.scss */
 .anim.entrees {
   animation-delay: 1s;
 }
-/* line 389, style.scss */
+/* line 406, style.scss */
 .anim.plats {
   animation-delay: 2s;
 }
-/* line 392, style.scss */
+/* line 409, style.scss */
 .anim.desserts {
   animation-delay: 3s;
 }
@@ -449,7 +468,7 @@ footer a {
     opacity: 1;
   }
 }
-/* line 420, style.scss */
+/* line 437, style.scss */
 .backloader {
   position: fixed;
   display: block;
@@ -458,11 +477,15 @@ footer a {
   height: 100%;
   width: 100%;
   margin: 0;
-  animation: displaynone 3s linear;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  animation: displaynone 4s linear;
   animation-fill-mode: forwards;
 }
 
-/* line 432, style.scss */
+/* line 453, style.scss */
 .loader {
   border: 16px solid #f3f3f3;
   border-radius: 50%;
@@ -485,6 +508,14 @@ footer a {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+@keyframes spinicon {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
   }
 }
 @keyframes displaynone {
